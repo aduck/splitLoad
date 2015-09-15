@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="container">
+	<div class="box">
+		<span>{{id}}</span>
+		<h2>{{title}}</h2>
+		<p>{{content}}</p>
+		<img src="{{src}}" />
+	</div>
+</div>
+<script src="splitLoad.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+	splitLoad.init({
+		tpl:document.getElementById("container").innerHTML,
+		box:document.getElementById("container"),
+		url:"test.json",
+		num:4
+	});
+},false);
+</script>	
+</body>	
+</html>
